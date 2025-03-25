@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Медина 1 жас!</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-image: url('img/fon.jpg'); /* фон сурет */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .card {
+      width: 600px;
+      background-color: rgba(255, 255, 255, 0.9); /* ашық фон */
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      padding: 20px 40px;
+      text-align: center;
+      animation: slideUp 2s ease;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .card h2 {
+      font-size: 28px;
+      color: #d63384;
+      margin-bottom: 20px;
+    }
+
+    .card p {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .image-gallery {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .image-gallery img {
+      width: 100px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #d63384;
+      transition: transform 0.3s;
+    }
+
+    .image-gallery img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Қосымша әшекейлер */
+    .confetti {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .confetti div {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #f4c2c2;
+      animation: fall 5s infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-10px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Конфетти -->
+  <div class="confetti">
+    <div style="left: 10%; animation-delay: 0s;"></div>
+    <div style="left: 30%; animation-delay: 1s;"></div>
+    <div style="left: 50%; animation-delay: 2s;"></div>
+    <div style="left: 70%; animation-delay: 3s;"></div>
+    <div style="left: 90%; animation-delay: 4s;"></div>
+  </div>
+
+  <div class="card">
+    <h2>Туған Күн Құтты Болсын!</h2>
+
+    <p>
+      Құрметті ағайын-туыс, бауырлар, құда-жекжат, нағашы-жиен, бөлелер, құрбы-құрдас, дос-жарандар, ұжымдастар, көршілер!
+    </p>
+
+    <p style="font-weight: bold; color: #d63384; font-size: 20px;">
+      Сіз(дер)ді Ханшайымымыз <strong>Мединаның</strong> 1 жас туған күніне арналған ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!
+    </p>
+
+    <p>
+      🎉 Өтетін орны: <strong>NNN мейрамханасы</strong><br>
+      📅 Той салтанаты: <strong>12 сәуір 2025 жыл</strong><br>
+      🕗 Уақыты: <strong>20:00-де</strong>
+    </p>
+
+    <div class="image-gallery">
+      <img src="img/surret1.jpeg" alt="Медина" />
+      <img src="img/surret2.jpeg" alt="Медина" />
+      <img src="img/surret3.jpeg" alt="Медина" />
+    </div>
+
+    <p style="margin-top: 30px;">
+      Құрметпен: <strong>Әжесі Мағрипаш</strong><br>
+      Ата-анасы: <strong>Рахат - Алтынзер</strong><br><br>
+      Қуанышымызға ортақ болыңыздар! 
+    </p>
+  </div>
+
+</body>
+</html>
